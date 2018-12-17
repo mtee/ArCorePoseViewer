@@ -130,26 +130,21 @@ public class PosesFromCSV : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (nodes.Count > 0) {
-			//Vector3 curPos = form.position;
+			
 			frameText.text = "frame #" + nodes [curNodeId].frameId;
 
 			// converting coordinate systems from ArCore to Unity
 			Vector3 e = nodes [curNodeId].quat.eulerAngles;
 			Vector3 p = nodes [curNodeId].position;
 			if (arcoreCS) { 
-				//			var tmp = e.z;
-				//			e.z = e.y;
-				//			e.y = tmp;
-				//	e.z = -e.z;
+				frameText.text = "frame #" + nodes [curNodeId].frameId;
+
+				// converting coordinate systems from ArCore to Unity
 				e.x = -e.x;
 				e.y = -e.y;
-
-
-				//		p.x = -p.x;
-				//		tmp = p.z;
 				p.z = -p.z;
-				//		p.y = tmp;
-				globalTransform.rotation = Quaternion.Euler(-90, 0, 90) * Quaternion.Euler (e);
+				m_cameraTransform.localRotation = Quaternion.Euler (0, 0, -90);
+				globalTransform.rotation = Quaternion.Euler (e);
 				globalTransform.position = p;  
 			} else {
 				m_cameraTransform.localRotation = Quaternion.Euler (e);

@@ -257,9 +257,6 @@
  <Reference Include="Unity.Locator">
  <HintPath>/home/mikhail/tools/Unity/2018.2/Editor/Data/Managed/Unity.Locator.dll</HintPath>
  </Reference>
- <Reference Include="Facebook.Unity.Settings">
- <HintPath>/home/mikhail/workspace/unity/ArCoreSessionPlayer/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/home/mikhail/tools/Unity/2018.2/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
